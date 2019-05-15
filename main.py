@@ -1,14 +1,23 @@
-import tkinter
+from tkinter import *
+from PIL import ImageTk
+from PIL import Image
 
 
 # Creation of the game Window
-window = tkinter.Tk()
-window.title("The Hangman")
-window.geometry("300x500")
-window.resizable()
+wd = Tk()
+wd.title("The Hangman")
+height = 500
+width = 300
+wd.configure(height=height, width=width)
+wd.resizable()
 
 # Image display
-image = tkinter.PhotoImage(file="logo.png")
-panel = tkinter.Label(window, image=image)
-panel.pack()
-window.mainloop()
+img_raw = Image.open("logo.jpg")
+img_raw = img_raw.resize((150, 150))
+
+image = ImageTk.PhotoImage(img_raw)
+can = Canvas(wd, height=height, width=width)
+can.create_image(width / 2, 50, image=image, anchor=N)
+can.pack()
+
+wd.mainloop()
