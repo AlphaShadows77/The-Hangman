@@ -6,8 +6,8 @@ from PIL import Image
 # Creation of the game Window
 wd = Tk()
 wd.title("The Hangman")
-height = 500
-width = 300
+height = 300
+width = 200
 wd.configure(height=height, width=width)
 wd.resizable()
 
@@ -22,5 +22,10 @@ image = ImageTk.PhotoImage(img_raw)
 can = Canvas(wd, height=height, width=width)
 can.create_image(width / 2, 50, image=image, anchor=N)
 can.pack()
+
+# Play button
+play = Button(wd, text="Play !")
+play.pack()
+play.place(x=width/2, y=height-30, anchor=S)
 
 wd.mainloop()
