@@ -11,6 +11,10 @@ width = 200
 wd.configure(height=height, width=width)
 wd.resizable(0, 0)
 
+# Title print
+title = Label(wd, text="The Hangman", font=(None, -17, "bold"))
+title.place(anchor=N, x=width/2, y=15)
+
 # Image load and resize
 img_raw = Image.open("logo.jpg")
 img_height = 150
