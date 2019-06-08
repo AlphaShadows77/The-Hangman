@@ -1,10 +1,10 @@
-from tkinter import *
+import tkinter as tk
 from PIL import ImageTk
 from PIL import Image
 
 
 # Creation of the game Window
-wd = Tk()
+wd = tk.Tk()
 wd.title("The Hangman")
 wd.configure(bg="white")
 height = 300
@@ -13,8 +13,8 @@ wd.configure(height=height, width=width)
 wd.resizable(0, 0)
 
 # Title print
-title = Label(wd, bg="white", font=(None, -17, "bold"), text="The Hangman")
-title.place(anchor=N, x=width/2, y=15)
+title = tk.Label(wd, bg="white", font=(None, -17, "bold"), text="The Hangman")
+title.place(anchor='n', x=width/2, y=15)
 
 # Image load and resize
 img_raw = Image.open("logo.jpg")
@@ -26,12 +26,12 @@ img_raw = img_raw.resize((img_height, img_width))
 image = ImageTk.PhotoImage(img_raw)
 
 # Image show
-can = Canvas(wd, bg="white", height=img_height, highlightthickness=0, width=img_width)
-can.create_image(0, 0, image=image, anchor=NW)
-can.place(anchor=N, x=width/2, y=50)
+can = tk.Canvas(wd, bg="white", height=img_height, highlightthickness=0, width=img_width)
+can.create_image(0, 0, image=image, anchor='nw')
+can.place(anchor='n', x=width/2, y=50)
 
 # Play button
-play = Button(wd, text="Play !")
-play.place(anchor=S, x=width/2, y=height - 30)
+play = tk.Button(wd, text="Play !")
+play.place(anchor='s', x=width/2, y=height - 30)
 
 wd.mainloop()
