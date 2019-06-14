@@ -2,6 +2,8 @@ import tkinter as tk
 from PIL import ImageTk
 from PIL import Image
 
+import game
+
 
 # Creation of the game Window
 wd = tk.Tk()
@@ -31,7 +33,7 @@ can.create_image(0, 0, image=image, anchor='nw')
 can.place(anchor='n', x=width/2, y=50)
 
 # Play button
-play = tk.Button(wd, text="Play !")
+play = tk.Button(wd, text="Play !", command=lambda : game.init_game(wd))
 play.place(anchor='s', x=width/2, y=height - 30)
 
 wd.mainloop()
