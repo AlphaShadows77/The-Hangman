@@ -8,8 +8,6 @@ wd = None
 wd_size = (wd.winfo_reqwidth(), wd.winfo_reqheight())
 hangman_size = (wd_size[0] * 2/5,
 				wd_size[1] * 2/5)
-word_size = (wd_size[0] * 1/14,
-			 wd_size[1] * 2/5)
 word_field_size = (wd_size[0] * 1/14,
 				   wd_size[1] * 2/5)
 
