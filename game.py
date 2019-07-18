@@ -18,12 +18,6 @@ _player_guess = StringVar()
 def get_player_guess():
 	return str(_player_guess.get())
 
-
-def init_game(wd):
-	wd = wd
-	w_utils.clear_window(wd)
-	create_elements()
-
 def _create_elements():
 	hangman = Canvas(wd, bg='white', highlightthickness=0,
 					 height=hangman_size[0], width=hangman_size[1])
@@ -33,3 +27,8 @@ def _create_elements():
 	word_field = Entry(wd, bg='white', exportselection=0, highlightthickness=0,
 					   justify=center, textvariable=_player_guess,
 					   validate='key', validatecommand='_on_key_press')
+
+def init_game(wd):
+	wd = wd
+	w_utils.clear_window(wd)
+	create_elements()
