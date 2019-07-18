@@ -32,4 +32,4 @@ def _create_elements():
 
 	word_field = Entry(wd, bg='white', exportselection=0, highlightthickness=0,
 					   justify=center, textvariable=_player_guess,
-					   validate='key', validatecommand='on_key_press')
+					   validate='key', validatecommand='_on_key_press')
