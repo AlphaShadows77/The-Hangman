@@ -24,7 +24,8 @@ def _create_elements():
 
 	word_field = Entry(wd, bg='white', exportselection=0, highlightthickness=0,
 					   justify=center, textvariable=_player_guess,
-					   validate='key', validatecommand='_on_key_press')
+					   validate='key', validatecommand='_on_key_press',
+					   height=word_field_size[0], width=word_field_size[1])
 
 def init_game(wd):
 	wd = wd
